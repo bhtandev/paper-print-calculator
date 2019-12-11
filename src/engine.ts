@@ -15,7 +15,7 @@ export default function(dic: DIContainer): Engine {
       const jobs = await dic.collector()
       const totalCosts = calculateTotalCosts(jobs)
 
-      console.log(`Total costs: $${totalCosts}`)
+      console.log(`Total costs: $${totalCosts.toFixed(2)}`)
 
       return {
         totalCosts,
